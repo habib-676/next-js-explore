@@ -1,10 +1,12 @@
+import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
+import events from "@/lib/constants";
 
 function page() {
   return (
     <section>
       <h1 className="text-center">
-        The Hub for Every Dev <br /> Event You Can't Miss
+        The Hub for Every Dev <br /> Event You Can not Miss
       </h1>
       <p className="text-center mt-5">
         Hackathons, Meetups and Conferences, All in One Place
@@ -15,8 +17,10 @@ function page() {
       <div className="mt-20 space-y-7">
         <h3>Featured Events</h3>
         <ul className="events">
-          {["Event 1", "Event 2", "Event 3"].map((event) => (
-            <li key={event}>{event}</li>
+          {events.map((event, index) => (
+            <li key={index}>
+              <EventCard {...event}></EventCard>
+            </li>
           ))}
         </ul>
       </div>
