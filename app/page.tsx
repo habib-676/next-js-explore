@@ -18,9 +18,9 @@ function page() {
         <h3>Featured Events</h3>
         <ul className="events">
           {events.map((event, index) => (
-            <li key={index}>
+            <div key={index}>
               <EventCard {...event}></EventCard>
-            </li>
+            </div>
           ))}
         </ul>
       </div>
